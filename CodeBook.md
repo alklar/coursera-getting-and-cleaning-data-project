@@ -118,11 +118,11 @@ Attributes describing means contain "Mean". Attributes describing standard devia
 1. The raw data was downloaded as zip file from [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and unzipped into the folder UCI HAR Dataset.
 2. The attribute names were loaded from the file `"/UCI HAR Dataset/features.txt"`. The names  were cleaned by replacing `"mean"` by `"Mean"`, `"std"` by `"Std"` and removing the brackets `"()"` for better readability. 
 3. Test set, test labels (activities) and test subjects were loaded into three data frames
-4. A category `test` was created
+4. A category `"test"` was created
 5. The data structures from step 2. and 3. were consolidated into single data frame `testComplete`.
 6. A data frame `trainComplete` for the training data was constructed similar to the steps 2. to 4. 
 7. Test and training data were merged into the data frame `completeSet`.
 8. Only the variables and the attributes describing means (containing `"Mean"`) standard deviations (containing `"Std"`) were kept in the data frame `meanStdSet`.
 9. Column means grouped by subject and activity for all columns were calculated and stored in the data frame `meanStdAvgs`.
-10. The activity ID (numeric) was replaced by the description (character).
+10. In the activity column the activity ID (numeric) was replaced by the description (character).
 11. The content of the data frame was written to the file `meanStdAvgs.txt`.   
